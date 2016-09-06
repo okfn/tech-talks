@@ -94,8 +94,8 @@
 	          { className: 'social' },
 	          React.createElement(
 	            'a',
-	            { className: 'btn', href: 'http://www.github.com/roll/oki-tech-talks' },
-	            'Github'
+	            { className: 'btn', href: 'https://app.contentful.com/spaces/e8o446ho3rnu/entries', target: 'blank', title: 'Open Contentful' },
+	            'Admin'
 	          )
 	        )
 	      )
@@ -117,7 +117,7 @@
 	        { className: 'timeline-icon' },
 	        React.createElement(
 	          'a',
-	          { href: this.props.entry.fields.speaker.fields.github, title: 'See on GitHub' },
+	          { href: this.props.entry.fields.speaker.fields.github, title: 'Open GitHub', target: 'blank' },
 	          React.createElement('img', { src: 'http:' + this.props.entry.fields.speaker.fields.avatar.fields.file.url })
 	        )
 	      ),
@@ -141,7 +141,7 @@
 	        React.createElement('p', { dangerouslySetInnerHTML: { __html: text } }),
 	        React.createElement(
 	          'a',
-	          { href: this.props.entry.fields.video, className: 'btn' },
+	          { href: this.props.entry.fields.video, className: 'btn', title: 'Open Youtube', target: 'blank' },
 	          'Screencast'
 	        )
 	      )
