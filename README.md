@@ -1,1 +1,1 @@
-# tech-talks
+# oki-tech-talks
