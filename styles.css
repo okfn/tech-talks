@@ -1,4 +1,5 @@
 @import "//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
+@import "//fonts.googleapis.com/css?family=Roboto:300,700";
 header:after, #timeline .timeline-item:after, header:before, #timeline .timeline-item:before {
   content: '';
   display: block;
@@ -21,9 +22,10 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: "Dosis", helvetica, arial, tahoma, verdana;
+  font-family: "Roboto", helvetica, arial, tahoma, verdana;
   line-height: 20px;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 16px;
   color: #726f77;
 }
 
