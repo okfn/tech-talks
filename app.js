@@ -1,8 +1,8 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const contentful = require('contentful');
-const moment = require('moment');
-const marked = require('marked');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import contentful from 'contentful';
+import moment from 'moment';
+import marked from 'marked';
 import './styles.css';
 
 
