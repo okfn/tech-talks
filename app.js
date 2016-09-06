@@ -24,6 +24,8 @@ const Header = React.createClass({
          </h1>
          <section className="social">
            <a className="btn" href="https://app.contentful.com/spaces/e8o446ho3rnu/entries" target="blank" title="Open Contentful">Admin</a>
+           <a className="btn" href="https://github.com/roll/oki-tech-talks" target="blank" title="Open GitHub">Source</a>
+           <a className="btn" href="http://codepen.io/itbruno/full/KwarLp/" target="blank" title="Open CodePen">Theme</a>
          </section>
        </div>
      </header>
