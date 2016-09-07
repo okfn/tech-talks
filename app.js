@@ -37,8 +37,12 @@ const Header = React.createClass({
 const TimelineEvent = React.createClass({
   render: function () {
     const text = marked(this.props.entry.fields.text);
+    let state = 'released'
+    if (moment(this.props.entry.fields.date) > moment()) {
+      state = 'announced';
+    }
     return (
-      <div className="timeline-item">
+      <div className={'timeline-item ' +state}>
         <div className="timeline-icon">
           <a href={this.props.entry.fields.speaker.fields.github} title="Open GitHub" target="blank">
             <img src={'http:'+this.props.entry.fields.speaker.fields.avatar.fields.file.url} />

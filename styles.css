@@ -125,11 +125,10 @@ header .social .btn {
   z-index: 10;
   border-radius: 50px;
 }
-#timeline .timeline-item .timeline-icon svg {
-  position: relative;
-  top: 14px;
-  left: 14px;
-}
+/* #timeline .timeline-item.announced .timeline-icon { */
+  /* background: #bbb; */
+  /* border: solid 3px #bbb; */
+/* } */
 #timeline .timeline-item .timeline-content {
   width: 45%;
   background: #fff;
@@ -158,6 +157,9 @@ header .social .btn {
   -ms-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
+#timeline .timeline-item.announced .timeline-content h2 {
+  background: #bbb;
+}
 #timeline .timeline-item .timeline-content:before {
   content: '';
   position: absolute;
@@ -168,6 +170,9 @@ header .social .btn {
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
   border-left: 7px solid #ee4d4d;
+}
+#timeline .timeline-item.announced .timeline-content:before {
+  border-left: 7px solid #bbb;
 }
 #timeline .timeline-item:nth-child(even) .timeline-content {
   float: right;
