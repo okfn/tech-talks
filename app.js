@@ -43,7 +43,11 @@ const TimelineEvent = React.createClass({
     }
     let avatar_url = '';
     if (this.props.entry.fields.speaker.fields.avatar) {
-      avatar_url = `http://${this.props.entry.fields.speaker.fields.avatar.fields.file.url}`;
+      avatar_url = `http:${this.props.entry.fields.speaker.fields.avatar.fields.file.url}`;
+    }
+    let entry_image_url = '';
+    if (this.props.entry.fields.image) {
+      entry_image_url = `http:${this.props.entry.fields.image.fields.file.url}`;
     }
     return (
       <div className={'timeline-item ' +state}>
@@ -57,7 +61,7 @@ const TimelineEvent = React.createClass({
             {this.props.entry.fields.name}&nbsp;
             <small>[{moment(this.props.entry.fields.date).format('MMMM Do')}]</small>
           </h2>
-          <img src={'http:'+this.props.entry.fields.image.fields.file.url} width="100%" />
+          <img src={entry_image_url} width="100%" />
           <p dangerouslySetInnerHTML={{__html: text}} />
           <a href={this.props.entry.fields.video} className="btn" title="Open Youtube" target="blank">Screencast</a>
         </div>

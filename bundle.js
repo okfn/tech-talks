@@ -140,7 +140,11 @@
 	    }
 	    var avatar_url = '';
 	    if (this.props.entry.fields.speaker.fields.avatar) {
-	      avatar_url = 'http://' + this.props.entry.fields.speaker.fields.avatar.fields.file.url;
+	      avatar_url = 'http:' + this.props.entry.fields.speaker.fields.avatar.fields.file.url;
+	    }
+	    var entry_image_url = '';
+	    if (this.props.entry.fields.image) {
+	      entry_image_url = 'http:' + this.props.entry.fields.image.fields.file.url;
 	    }
 	    return _react2.default.createElement(
 	      'div',
@@ -170,7 +174,7 @@
 	            ']'
 	          )
 	        ),
-	        _react2.default.createElement('img', { src: 'http:' + this.props.entry.fields.image.fields.file.url, width: '100%' }),
+	        _react2.default.createElement('img', { src: entry_image_url, width: '100%' }),
 	        _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: text } }),
 	        _react2.default.createElement(
 	          'a',
