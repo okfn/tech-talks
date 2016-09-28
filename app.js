@@ -36,7 +36,7 @@ const Header = React.createClass({
 // Create timeline event
 const TimelineEvent = React.createClass({
   render: function () {
-    const text = marked(this.props.entry.fields.text);
+    const text = marked(this.props.entry.fields.text || '');
     let state = 'released'
     if (moment(this.props.entry.fields.date) > moment()) {
       state = 'announced';
