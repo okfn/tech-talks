@@ -41,11 +41,15 @@ const TimelineEvent = React.createClass({
     if (moment(this.props.entry.fields.date) > moment()) {
       state = 'announced';
     }
+    let avatar_url = '';
+    if (this.props.entry.fields.speaker.fields.avatar) {
+      avatar_url = `http://${this.props.entry.fields.speaker.fields.avatar.fields.file.url}`;
+    }
     return (
       <div className={'timeline-item ' +state}>
         <div className="timeline-icon">
           <a href={this.props.entry.fields.speaker.fields.github} title="Open GitHub" target="blank">
-            <img src={'http:'+this.props.entry.fields.speaker.fields.avatar.fields.file.url} />
+            <img src={avatar_url} />
           </a>
         </div>
         <div className="timeline-content">

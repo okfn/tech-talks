@@ -138,6 +138,10 @@
 	    if ((0, _moment2.default)(this.props.entry.fields.date) > (0, _moment2.default)()) {
 	      state = 'announced';
 	    }
+	    var avatar_url = '';
+	    if (this.props.entry.fields.speaker.fields.avatar) {
+	      avatar_url = 'http://' + this.props.entry.fields.speaker.fields.avatar.fields.file.url;
+	    }
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'timeline-item ' + state },
@@ -147,7 +151,7 @@
 	        _react2.default.createElement(
 	          'a',
 	          { href: this.props.entry.fields.speaker.fields.github, title: 'Open GitHub', target: 'blank' },
-	          _react2.default.createElement('img', { src: 'http:' + this.props.entry.fields.speaker.fields.avatar.fields.file.url })
+	          _react2.default.createElement('img', { src: avatar_url })
 	        )
 	      ),
 	      _react2.default.createElement(
