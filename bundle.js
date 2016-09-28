@@ -133,7 +133,7 @@
 	  displayName: 'TimelineEvent',
 
 	  render: function render() {
-	    var text = (0, _marked2.default)(this.props.entry.fields.text);
+	    var text = (0, _marked2.default)(this.props.entry.fields.text || '');
 	    var state = 'released';
 	    if ((0, _moment2.default)(this.props.entry.fields.date) > (0, _moment2.default)()) {
 	      state = 'announced';
