@@ -42,7 +42,7 @@ const TimelineEvent = React.createClass({
       state = 'announced';
     }
     let avatar_url = '';
-    if (this.props.entry.fields.speaker.fields.avatar) {
+    if ((this.props.entry.fields.speaker.fields.avatar || {}).fields) {
       avatar_url = `http:${this.props.entry.fields.speaker.fields.avatar.fields.file.url}`;
     }
     let entry_image_url = '';
